@@ -3,7 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
-// import sequelize connection
+// import sequelize connection to heroku
 const app = express();
 const PORT = process.env.PORT || 3001;
 
