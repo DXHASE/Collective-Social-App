@@ -8,8 +8,6 @@
     margin: 0;
     font-family: sans-serif;
     color: #333;
-    background-image:url(../images/collective-background.jpg);
-    background-size: cover;
   }
   
   a {
@@ -41,7 +39,6 @@
   .post-list {
     margin: 0;
     padding: 0;
-    list-style-type: none;
   }
   
   textarea, input {
@@ -123,7 +120,7 @@
   .post {
     margin-bottom: 2%;
     line-height: 150%;
-    background-color: #333;
+    border-bottom: solid 1px gray;
   }
   
   .post .title span {
