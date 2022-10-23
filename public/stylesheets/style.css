@@ -43,8 +43,11 @@
   }
   
   .post-list {
+    list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   textarea, input {
@@ -77,6 +80,7 @@
     max-width: fit-content;
     margin-left:300px;
     margin-bottom: 10px;
+    border-radius: 15px;
   }
 
   .signup-form{
@@ -84,7 +88,7 @@
     padding: 10px;
     max-width: fit-content;
     margin-left:300px;
-    
+    border-radius: 15px;
   }
 
   .wrapper {
@@ -148,8 +152,13 @@
   .post {
     padding: 2%;
     margin-bottom: 3%;
+    margin-right: 10px;
     line-height: 150%;
     background-color: rgba(51, 51, 51, 0.9);
+    border-radius: 15px;
+    flex-wrap: nowrap;
+    max-width: fit-content;
+    min-width: 500px;
   }
   
   .post .title {
@@ -180,6 +189,7 @@
   
   .comment-form {
     margin-bottom: 5%;
+    border-radius: 15px;
   }
   
   .comment {
@@ -188,6 +198,7 @@
     background-color: rgba(235, 97, 1, 0.7);
     color: black;
     text-shadow: 0 0 10px rgba(0, 0, 0, 1.5);
+    border-radius: 15px;
   }
   
   .comment:nth-child(odd) {
@@ -202,6 +213,7 @@
   .profile-post{
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
+    border-radius: 15px;
   }
   .new-post-form input {
     width: 300px;
