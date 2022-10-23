@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post" id="{{id}}">
   <div class="title">
     By {{user.username}} on {{format_date created_at}}
       <div class="user-post">
@@ -6,7 +6,7 @@
       </div>
   </div>
   <div class="meta">
-    {{likes_count}} {{format_plural "Like" likes_count}}
+    <a href="/post/{{id}}">{{likes_count}} {{format_plural "Like" likes_count}}</a>
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
