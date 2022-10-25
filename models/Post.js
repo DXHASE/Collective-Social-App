@@ -13,6 +13,7 @@ class Post extends Model {
         },
         attributes: [
           'id',
+          'image',
           'title',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE post.id = likes.post_id)'), 'likes_count']
@@ -44,6 +45,10 @@ Post.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    image: {
+      type: DataTypes.BLOB('long'),
+      allowNull: true
     },
     user_id: {
       type: DataTypes.INTEGER,

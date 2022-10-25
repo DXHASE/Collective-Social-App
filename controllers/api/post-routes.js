@@ -1,7 +1,9 @@
+const path = require('path');
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment, Likes } = require('../../models');
 const withAuth = require('../../utils/auth');
+const upload = require('../../utils/upload');
 
 // get all users
 router.get('/', (req, res) => {
@@ -10,6 +12,7 @@ router.get('/', (req, res) => {
     attributes: [
       'id',
       'title',
+      'image',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE likes.id = likes.post_id)'), 'likes_count']
     ],
@@ -35,6 +38,11 @@ router.get('/', (req, res) => {
     });
 });
 
+//get the file from form
+//router.get('/', (req, res) => {
+  //res.sendFile(path.join(__dirname, "public"))
+//});
+
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -43,6 +51,7 @@ router.get('/:id', (req, res) => {
     attributes: [
       'id',
       'title',
+      'image',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE post.id = likes.post_id)'), 'likes_count']
     ],
@@ -74,10 +83,11 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', withAuth, (req, res) => {
-  // expects {title: 'Taskmaster goes public!'
+//create new post
+router.post('/', withAuth, (req, res) => { console.log(req.body)
   Post.create({
     title: req.body.title,
+    image: req.body.image,
     user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
@@ -90,7 +100,7 @@ router.post('/', withAuth, (req, res) => {
 router.put('/upvote', withAuth, (req, res) => {
   // custom static method created in models/Post.js
   Post.upvote({ ...req.body, user_id: req.session.user_id }, { Likes, Comment, User })
-    .then(updatedVoteData => res.json(updatedVoteData))
+    .then(updatedLikeData => res.json(updatedLikeData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);

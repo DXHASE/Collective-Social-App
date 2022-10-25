@@ -14,6 +14,7 @@ router.get('/', withAuth, (req, res) => {
     attributes: [
       'id',
       'title',
+      'image',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE post.id = likes.post_id)'), 'likes_count']
     ],
@@ -47,6 +48,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     attributes: [
       'id',
       'title',
+      'image',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM likes WHERE post.id = likes.post_id)'), 'likes_count']
     ],
