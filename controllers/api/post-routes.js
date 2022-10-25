@@ -84,11 +84,10 @@ router.get('/:id', (req, res) => {
 });
 
 //create new post
-router.post('/', withAuth, upload.single('image'), (req, res) => {
-  console.log(req.file)
+router.post('/', withAuth, (req, res) => { console.log(req.body)
   Post.create({
     title: req.body.title,
-    image: req.file.path,
+    image: req.body.image,
     user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
