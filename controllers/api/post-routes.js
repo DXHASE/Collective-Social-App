@@ -3,7 +3,6 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment, Likes } = require('../../models');
 const withAuth = require('../../utils/auth');
-const upload = require('../../utils/upload');
 
 // get all users
 router.get('/', (req, res) => {
