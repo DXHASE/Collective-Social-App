@@ -48,10 +48,13 @@
   - If you have any questions over the project, contact us at: 
   danielchas886@gmail.com
   - Github Links: 
-  https://github.com/DXHASE
-  https://github.com/chazgraham
-  https://github.com/maximtz13
-  https://github.com/Mattrp227
+    - https://github.com/DXHASE
+    - https://github.com/chazgraham
+    - https://github.com/maximtz13
+    - https://github.com/Mattrp227
 
   ## License
   - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+  ## Application Picture
+  
