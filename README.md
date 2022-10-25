@@ -37,6 +37,7 @@
 
   ## Tests
   - You can test this application by visiting the links below:
+  - https://social-collective-app.herokuapp.com/
 
   ## Contributors
   - Chaz Graham 
@@ -57,4 +58,3 @@
   - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Application Picture
-  
