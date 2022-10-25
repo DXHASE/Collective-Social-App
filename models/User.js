@@ -37,6 +37,10 @@ User.init(
       validate: {
         len: [4]
       }
+    },
+    profileImage: {
+      type: DataTypes.BLOB('long'),
+      allowNull: true
     }
   },
   {

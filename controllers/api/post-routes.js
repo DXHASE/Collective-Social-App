@@ -22,12 +22,12 @@ router.get('/', (req, res) => {
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ['username', 'profileImage']
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username', 'profileImage']
       }
     ]
   })
@@ -37,11 +37,6 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
-//get the file from form
-//router.get('/', (req, res) => {
-  //res.sendFile(path.join(__dirname, "public"))
-//});
 
 router.get('/:id', (req, res) => {
   Post.findOne({
@@ -61,12 +56,12 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ['username', 'profileImage']
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username', 'profileImage']
       }
     ]
   })
