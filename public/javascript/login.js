@@ -50,19 +50,22 @@ function signupFormHandler(event) {
         document.location.replace('/');
       } else {
         const script = document.createElement("script");
-        // const getScript = document.getElementById('script');
-
         script.setAttribute('id','script');
-        script.innerText = "Swal.fire('User has already been created!')";
+        script.innerText = "Swal.fire({ \n \
+          title: 'User Already Exists!', \n \
+          width: 600, \n \
+          padding: '3em', \n \
+          color: '#716add', \n \
+          background: '#fff', \n \
+          backdrop: ` \n \
+            rgba(0,0,123,0.4) \n \
+            url('/images/ghost.gif') \n \
+            left top \n \
+            no-repeat \n \
+          ` \n \
+        })";
         const create = document.body.appendChild(script);
-        // const deleteScript = document.getElementById('script').remove();
-
         create
-        // .done(deleteScript);
-        
-        // const function1 = (document.getElementById("Swal").innerHTML = "Swal.fire('User has already been created!')")
-        // const function2 = (document.getElementById("Swal").innerHTML = "")
-        // function1.then(function2);
       }
     }
   }
