@@ -43,7 +43,6 @@
   - Chaz Graham 
   - Daniel Chase 
   - Maximo Martinez 
-  - Matt Peck
 
   ## Questions
   - If you have any questions over the project, contact us at: 
@@ -52,7 +51,6 @@
     - https://github.com/DXHASE
     - https://github.com/chazgraham
     - https://github.com/maximtz13
-    - https://github.com/Mattrp227
 
   ## License
   - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

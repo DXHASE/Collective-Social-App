@@ -1,8 +1,8 @@
 <article class="post" id="{{id}}">
   <div class="title">
-    By <img class="profile-image" src="{{user.profileImage}}" /> {{user.username}} on {{format_date created_at}} 
+      <img class="profile-image" src="{{user.profileImage}}" /> {{user.username}} 
       <div class="user-post">
-      <img src="{{image}}" width="300" height="300" />
+      <img src="{{image}}" width="350" height="350" />
       <br>
       {{title}}
       </div>
@@ -11,5 +11,7 @@
     <a href="/post/{{id}}">{{likes_count}} {{format_plural "Like" likes_count}}</a>
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <br>
+    {{format_date created_at}} 
   </div>
 </article>
