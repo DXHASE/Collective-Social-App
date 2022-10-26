@@ -8,9 +8,9 @@
       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-      {{post.likes_count}}<a href="/post/{{id}}">{{likes_count}}<span class="material-symbols-outlined">favorite</span></a>
+      {{post.likes_count}}<a href="/post/{{id}}">{{likes_count}} <span class="material-symbols-outlined">favorite</span></a>
       |
-      <a href="/post/{{post.id}}">{{post.comments.length}}<span class="material-symbols-outlined">comment</span></a></a>
+      <a href="/post/{{post.id}}">{{post.comments.length}} <span class="material-symbols-outlined">comment</span></a>
     </div>
     <button type="submit">Save post</button>
     <button type="button" class="delete-post-btn">Delete post</button>
