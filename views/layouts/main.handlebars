@@ -6,18 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collective</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
   <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Collective</a>
+        <a href="/"><span class="material-symbols-outlined">home</span>Collective</a>
       </h1>
       <nav>
         {{#if loggedIn}}
-        <a href="/profile">profile</a>
-        <button id="logout" class="btn-no-style">logout</button>  
+        <a href="/profile" class="link"><span class="material-symbols-outlined">account_circle</span> profile</a>
+        <button id="logout" class="btn-no-style"><span class="material-symbols-outlined">logout</span> logout</button>  
         {{/if}}
       </nav>
     </header>
@@ -27,11 +29,12 @@
       {{else}}
       <form class="login-form">
   <div>
-    <label for="email-login">email:</label>
+    <h4>Login</h4>
+    <p for="email-login">email:</p>
     <input type="text" id="email-login" />
   </div>
   <div>
-    <label for="password-login">password:</label>
+    <p for="password-login">password:</p>
     <input type="password" id="password-login" />
   </div>
   <div>
@@ -40,20 +43,21 @@
 </form>
 
 <form class="signup-form">
+  <h4>Register</h4>
   <div>
-    <label for="username-signup">username:</label>
+    <p for="username-signup">username:</p>
     <input type="text" id="username-signup" />
   </div>
   <div>
-    <label for="email-signup">email:</label>
+    <p for="email-signup">email:</p>
     <input type="text" id="email-signup" />
   </div>
   <div>
-    <label for="password-signup">password:</label>
+    <p for="password-signup">password:</p>
     <input type="password" id="password-signup" />
   </div>
   <div>
-    <label for="profileImage">Profile Image</label>
+    <label for="profileImage"><span class="material-symbols-outlined">account_circle</span> Profile-Image</label>
       <input type="file" id="profileImage" name="profileImage" enctype='multipart/form-data' />
   </div>
   <div>
@@ -65,7 +69,10 @@
       {{/if}}
     </main>
     <footer>
-      Thanks for visiting!
+      <p>
+            <strong class="has-text-white">Collective</strong> by <a href="https://github.com/DXHASE">Daniel Chase</a>,<a href="https://github.com/maximtz13"> Maximo Martinez</a>, and <a href="https://github.com/chazgraham">Chaz Graham</a> The source code is located at
+            <a href="https://github.com/DXHASE/Project-2">GitHub</a>.
+      </p>
     </footer>
   </div>
   
