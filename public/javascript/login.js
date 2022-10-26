@@ -17,7 +17,23 @@ async function loginFormHandler(event) {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert(response.statusText);
+      const script = document.createElement("script");
+      script.setAttribute('id','script');
+      script.innerText = "Swal.fire({ \n \
+        title: 'Invalid Username or Password, Or user doesnt exist!', \n \
+        width: 600, \n \
+        padding: '3em', \n \
+        color: '#716add', \n \
+        background: '#fff', \n \
+        backdrop: ` \n \
+          rgba(0,0,123,0.4) \n \
+          url('/images/ghost.gif') \n \
+          left top \n \
+          no-repeat \n \
+        ` \n \
+      })";
+      const create = document.body.appendChild(script);
+      create
     }
   }
 }
