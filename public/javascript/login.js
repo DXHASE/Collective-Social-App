@@ -85,7 +85,27 @@ function signupFormHandler(event) {
       }
     }
   }
-  reader.readAsDataURL(profileImage);
+  if (profileImage) {
+    reader.readAsDataURL(profileImage);
+  } else {
+    const script = document.createElement("script");
+    script.setAttribute('id','script');
+    script.innerText = "Swal.fire({ \n \
+      title: 'Please select a profile Image!', \n \
+      width: 600, \n \
+      padding: '3em', \n \
+      color: '#716add', \n \
+      background: '#fff', \n \
+      backdrop: ` \n \
+        rgba(0,0,123,0.4) \n \
+        url('/images/ghost.gif') \n \
+        left top \n \
+        no-repeat \n \
+      ` \n \
+    })";
+    const create = document.body.appendChild(script);
+    create
+  }
 }
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
