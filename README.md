@@ -14,6 +14,9 @@
 
   ## Description
   - Our application is a social media platform that allows users to log in to an existing account or sign up for one if said user does not have an existing account. Once the user is logged in they will be able to view past posts by other users and visit their own profile via the nav bar where they will be able to create, update, and delete their own posts. Included in the posts will be how many users liked that post, how many users commented on that post, and if the user were to click on the comments tab they can view old comments and add a comment for themselves.
+  Checkout the deployed application- https://social-collective-app.herokuapp.com/
+  ![](./public/images/readme1.jpg)
+  ![](./public/images/readme2.jpg)
 
   ## Installation
   * The steps include: 
@@ -36,8 +39,7 @@
   - Our application will be used as a social media platform for the general public
 
   ## Tests
-  - You can test this application by visiting the links below:
-  - https://social-collective-app.herokuapp.com/
+  - Currently there are no tests to run for this application at this time.
 
   ## Contributors
   - Chaz Graham 
@@ -55,4 +57,3 @@
   ## License
   - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  ## Application Picture
