@@ -11,7 +11,23 @@ async function deleteFormHandler(event) {
   if (response.ok) {
     document.location.replace('/profile/');
   } else {
-    alert(response.statusText);
+    const script = document.createElement("script");
+    script.setAttribute('id','script');
+    script.innerText = "Swal.fire({ \n \
+      title: 'Error!', \n \
+      width: 600, \n \
+      padding: '3em', \n \
+      color: '#716add', \n \
+      background: '#fff', \n \
+      backdrop: ` \n \
+        rgba(0,0,123,0.4) \n \
+        url('/images/ghost.gif') \n \
+        left top \n \
+        no-repeat \n \
+      ` \n \
+    })";
+    const create = document.body.appendChild(script);
+    create
   }
 }
 
