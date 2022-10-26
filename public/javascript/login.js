@@ -49,7 +49,7 @@ function signupFormHandler(event) {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert(response.statusText);
+        document.getElementById("Swal").innerHTML = "Swal.fire('User has already been created!')";
       }
     }
   }
