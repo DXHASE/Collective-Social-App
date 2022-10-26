@@ -163,6 +163,7 @@ main {
 
 .delete-post-btn {
   background-color: #d41414;
+  margin-left: 5px;
 }
 
 .delete-post-btn:hover {
