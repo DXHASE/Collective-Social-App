@@ -20,7 +20,7 @@ async function upvoteClickHandler(event) {
     const script = document.createElement("script");
     script.setAttribute('id','script');
     script.innerText = "Swal.fire({ \n \
-      title: 'Error!', \n \
+      title: 'You already liked this post!', \n \
       width: 600, \n \
       padding: '3em', \n \
       color: '#716add', \n \
