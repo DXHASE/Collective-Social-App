@@ -68,7 +68,7 @@ function signupFormHandler(event) {
         const script = document.createElement("script");
         script.setAttribute('id','script');
         script.innerText = "Swal.fire({ \n \
-          title: 'User Already Exists!', \n \
+          title: 'User Already Exists or Invalid User!', \n \
           width: 600, \n \
           padding: '3em', \n \
           color: '#716add', \n \
