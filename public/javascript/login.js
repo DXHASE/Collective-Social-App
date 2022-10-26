@@ -49,7 +49,20 @@ function signupFormHandler(event) {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        document.getElementById("Swal").innerHTML = "Swal.fire('User has already been created!')";
+        const script = document.createElement("script");
+        // const getScript = document.getElementById('script');
+
+        script.setAttribute('id','script');
+        script.innerText = "Swal.fire('User has already been created!')";
+        const create = document.body.appendChild(script);
+        // const deleteScript = document.getElementById('script').remove();
+
+        create
+        // .done(deleteScript);
+        
+        // const function1 = (document.getElementById("Swal").innerHTML = "Swal.fire('User has already been created!')")
+        // const function2 = (document.getElementById("Swal").innerHTML = "")
+        // function1.then(function2);
       }
     }
   }
