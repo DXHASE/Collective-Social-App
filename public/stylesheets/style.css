@@ -70,21 +70,35 @@ form label {
   display: block;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
+
 .login-form{
   background-color: rgba(235, 97, 1, 0.7);
   padding: 10px;
-  max-width: fit-content;
-  margin-left:300px;
-  margin-bottom: 10px;
+  margin: 10px;
   border-radius: 15px;
+  width: 50%;
+  max-width: 400px;
 }
 
 .signup-form{
   background-color: rgba(235, 97, 1, 0.7);
   padding: 10px;
-  max-width: fit-content;
-  margin-left:300px;
+  margin: 10px;
   border-radius: 15px;
+  width: 50%;
+  max-width: 400px;
 }
 
 .wrapper {
@@ -295,4 +309,8 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+.w100 {
+  width: 100%;
 }

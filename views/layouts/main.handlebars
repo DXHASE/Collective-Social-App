@@ -29,34 +29,35 @@
       {{#if loggedIn}}
       {{{ body }}}
       {{else}}
-      <form class="login-form">
+<div class="flex-container">
+<form class="login-form flex-child1">
   <div>
     <h4>Login</h4>
     <p for="email-login">email:</p>
-    <input type="text" id="email-login" autocomplete="current-email" />
+    <input class="w100" type="text" id="email-login" autocomplete="current-email" />
   </div>
   <div>
     <p for="password-login">password:</p>
-    <input type="password" id="password-login" autocomplete="current-password" />
+    <input class="w100" type="password" id="password-login" autocomplete="current-password" />
   </div>
   <div>
     <button type="submit">login</button>
   </div>
 </form>
 
-<form class="signup-form">
+<form class="signup-form flex-child2">
   <h4>Register</h4>
   <div>
     <p for="username-signup">username:</p>
-    <input type="text" id="username-signup" autocomplete="new-username" />
+    <input class="w100" type="text" id="username-signup" autocomplete="new-username" />
   </div>
   <div>
     <p for="email-signup">email:</p>
-    <input type="text" id="email-signup" autocomplete="new-email" />
+    <input class="w100" type="text" id="email-signup" autocomplete="new-email" />
   </div>
   <div>
     <p for="password-signup">password:</p>
-    <input type="password" id="password-signup" autocomplete="new-password" />
+    <input class="w100" type="password" id="password-signup" autocomplete="new-password" />
   </div>
   <div>
     <label for="profileImage"><span class="material-symbols-outlined">account_circle</span> Profile-Image</label>
@@ -66,6 +67,7 @@
     <button type="submit">signup</button>
   </div>
 </form>
+</div>
 
   <script id="Swal"></script>
 
