@@ -2,15 +2,15 @@
   <div class="title">
       <img class="profile-image" src="{{user.profileImage}}" /> {{user.username}} 
       <div class="user-post">
-      <img src="{{image}}" width="350" height="350" />
+      <img class="post-image" src="{{image}}" width="350" height="350" />
       <br>
       {{title}}
       </div>
   </div>
   <div class="meta">
-    <a href="/post/{{id}}">{{likes_count}} {{format_plural "Like" likes_count}}</a>
+    <a href="/post/{{id}}">{{likes_count}}<span class="material-symbols-outlined">favorite</span></a>
     |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <a href="/post/{{id}}">{{comments.length}} <span class="material-symbols-outlined">comment</span></a>
     <br>
     {{format_date created_at}} 
   </div>
