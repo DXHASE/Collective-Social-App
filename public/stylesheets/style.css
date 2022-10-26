@@ -128,7 +128,7 @@ h2 {
 }
 
 h4 {
-  margin: 2px 0px 4px 60px;
+  margin: 2px 0px 4px 0px;
 }
 
 .link {
@@ -313,4 +313,8 @@ footer {
 
 .w100 {
   width: 100%;
+}
+
+.tc {
+  text-align: center;
 }
