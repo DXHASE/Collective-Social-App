@@ -1,5 +1,5 @@
-<article class="edit-posts">
-  <a href="/profile" class="link">&larr; Back to profile <span class="material-symbols-outlined">account_circle</span></a>
+<article>
+  <a href="/profile"> &larr; Back to profile</a>
   <h2>
     Edit Post
   </h2>
@@ -8,9 +8,9 @@
       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-      {{post.likes_count}}<a href="/post/{{id}}">{{likes_count}} <span class="material-symbols-outlined">favorite</span></a>
+      {{post.likes_count}} {{format_plural "like" post.likes_count}} 
       |
-      <a href="/post/{{post.id}}">{{post.comments.length}} <span class="material-symbols-outlined">comment</span></a>
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
     <button type="submit">Save post</button>
     <button type="button" class="delete-post-btn">Delete post</button>
